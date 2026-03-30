@@ -1,0 +1,25 @@
+version: '3'
+
+tasks:
+  default:
+    desc: Pre-commit for 'ruff check' & 'ruff format'
+    aliases:
+      - pre-commit
+    deps:
+      - check
+      - formt
+    
+
+  check:
+    desc: ruff check
+    aliases:
+      - chk
+    cmds:
+      - ruff check
+
+  formatt:
+    desc: ruff format
+    aliase:
+      - fmtt
+    cmds:
+      - ruff format
